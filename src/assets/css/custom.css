@@ -1,0 +1,25 @@
+.slick-prev, .slick-next {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    z-index: 1;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transisi untuk efek hover */
+}
+
+.slick-prev:hover, .slick-next:hover {
+    /* background-color: rgba(255, 255, 255, 0.8); Ubah warna background saat hover */
+    background-color: #FF5833;
+    /* transform: scale(1.1); Perbesar sedikit saat hover */
+}
+
+.slick-prev {
+    left: -25px;
+}
+
+.slick-next {
+    right: -25px;
+}
