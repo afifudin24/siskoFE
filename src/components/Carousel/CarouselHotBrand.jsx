@@ -39,7 +39,6 @@ const CarouselHotBrand = () => {
     };
     return (
         <div className="w-11/12 md:w-10/12 mx-auto mt-10">
-           
             <p className="border-b-2 w-32  border-b-primary pb-2 font-bold font-sans text-[24px]"><span className="text-textColor-secondary">Hot</span> <span className="text-primary ">Brands</span></p>
             <div className="carousel-container py-5 border-t-2 border-t-stroke hotbrands">
                 <Slider {...settings}>

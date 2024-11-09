@@ -7,7 +7,8 @@ import CategoryApiMethod from '../../api/apiMethod/categoryApiMethod'
 import ProductApiMethod from '../../api/apiMethod/productApiMethod'
 const NavLists = () => {
   const [categories, setCategories] = useState([])
-  const location = useLocation()
+  const location = useLocation();
+  const [product, setProduct] = useState([]);
   const getCategory = async () => {
     try {
       const response = await CategoryApiMethod.getCategory()
@@ -35,7 +36,7 @@ const NavLists = () => {
     }
     // console.log('params', searchParams.get('categories'))
     console.log('location', location.search)
-    getProduct()
+   
   }, [selectedCategory, setSearchParams, searchParams, location.search])
 
   const toggleCategory = category => {
@@ -47,14 +48,7 @@ const NavLists = () => {
     )
   }
 
-  const getProduct = async () => {
-    try {
-      const response = await ProductApiMethod.getProduct(location.search)
-      console.log('product', JSON.parse(response))
-    } catch (err) {
-      console.log(err)
-    }
-  }
+
 
   return (
     <div className='py-3 my-1'>
